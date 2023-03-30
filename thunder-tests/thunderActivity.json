@@ -1,0 +1,16 @@
+[
+  {
+    "_id": "73528c43-04aa-4904-8717-82d72aea7337",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3001/teams",
+    "url": "http://localhost:3001/teams",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-03-29T20:26:21.706Z",
+    "modified": "2023-03-29T20:26:21.706Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  }
+]

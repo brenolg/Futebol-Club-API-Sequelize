@@ -1,0 +1,9 @@
+const path = require('path');
+
+module.exports = {
+  // 'config': path.resolve('app/backend/src', 'config.js'),
+  // não existe config nesse projeto
+  'models-path': path.resolve('app/backend/src/', 'models'),
+  'seeders-path': path.resolve('app/backend/src/', 'seeders'),
+  'migrations-path': path.resolve('app/backend/src', 'migrations'),
+};

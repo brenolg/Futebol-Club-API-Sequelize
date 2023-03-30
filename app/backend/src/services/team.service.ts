@@ -1,7 +1,8 @@
 import Teams from '../database/models/teams';
 
-const getAllTeams = async (): Promise<Teams[]> => Teams.findAll();
-
-const teamsService = { getAllTeams };
-
-export default teamsService;
+export default class TeamsService {
+  static async getAllTeams(): Promise<Teams[]> {
+    const allTeams = await Teams.findAll();
+    return allTeams;
+  }
+}

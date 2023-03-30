@@ -1,11 +1,9 @@
 import { Request, Response } from 'express';
-import teamsService from '../services';
+import TeamsService from '../services';
 
-const getAllTeams = async (_req : Request, res: Response) => {
-  const allTeams = await teamsService.getAllTeams();
-  return res.status(200).json(allTeams);
-};
-
-const teamsController = { getAllTeams };
-
-export default teamsController;
+export default class TeamsController {
+  static async getAllTeams(_req: Request, res: Response) {
+    const allTeams = await TeamsService.getAllTeams();
+    return res.status(200).json(allTeams);
+  }
+}
