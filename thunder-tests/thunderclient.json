@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "_id": "39a97eb5-b0d6-48a6-89f2-3e93b0fdf309",
+    "colId": "79eea4ec-f7d0-412a-9352-5f1e6fab6290",
+    "containerId": "",
+    "name": "http://localhost:3001/teams",
+    "url": "http://localhost:3001/teams",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2023-03-30T12:17:57.101Z",
+    "modified": "2023-03-30T12:18:09.697Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "f0f17ffe-3aff-4fca-90b0-b25b6565066c",
+    "colId": "79eea4ec-f7d0-412a-9352-5f1e6fab6290",
+    "containerId": "",
+    "name": "http://localhost:3001/id",
+    "url": "http://localhost:3001/teams/1",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2023-03-30T12:18:01.864Z",
+    "modified": "2023-03-30T12:18:16.078Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  }
+]

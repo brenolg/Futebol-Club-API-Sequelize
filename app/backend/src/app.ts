@@ -1,7 +1,7 @@
 import * as express from 'express';
 import 'express-async-errors';
 import routes from './routers';
-import error from './middlewares/error';
+import APIerrors from './middlewares/APIerrors';
 
 class App {
   public app: express.Express;
@@ -16,7 +16,7 @@ class App {
 
     this.app.use('/teams', routes.teamsRouter);
 
-    this.app.use(error);
+    this.app.use(APIerrors);
   }
 
   private config():void {
