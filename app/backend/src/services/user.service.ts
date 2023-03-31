@@ -27,4 +27,12 @@ export default class UserService {
 
     return { token };
   }
+
+  async getRole(userData: ILogin) {
+    const { email } = userData;
+    const user = await this.model.findOne({
+      where: { email },
+      attributes: ['role'] });
+    return user;
+  }
 }

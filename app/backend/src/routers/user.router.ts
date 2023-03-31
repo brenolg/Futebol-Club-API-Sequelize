@@ -7,9 +7,16 @@ const userController = new UserController();
 
 userRouter.post(
   '/',
-  userMiddlewares.validateAces,
+  userMiddlewares.validateAcesLogin,
   (req: Request, res: Response) =>
     userController.login(req, res),
+);
+
+userRouter.get(
+  '/role',
+  userMiddlewares.validateToken,
+  (req: Request, res: Response) =>
+    userController.loginRole(req, res),
 );
 
 export default userRouter;

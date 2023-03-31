@@ -12,4 +12,9 @@ export default class UserController {
     const token = await this.service.login(req.body);
     res.status(200).json(token);
   }
+
+  async loginRole(req: Request, res: Response) : Promise<void> {
+    const userRole = await this.service.getRole(req.body);
+    res.status(200).json(userRole);
+  }
 }

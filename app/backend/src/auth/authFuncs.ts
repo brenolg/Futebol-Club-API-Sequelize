@@ -1,6 +1,6 @@
 import { sign, verify } from 'jsonwebtoken';
 
-const secret = process.env.JWT_SECRET || 'secret';
+const secret = process.env.JWT_SECRET || 'jwt_secret';
 
 const JWT_CONFIG : object = {
   algorithm: 'HS256',
