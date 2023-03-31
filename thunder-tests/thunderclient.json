@@ -26,5 +26,24 @@
     "headers": [],
     "params": [],
     "tests": []
+  },
+  {
+    "_id": "e9ed7bf2-a625-47b6-b4a6-f64a9e89d0d2",
+    "colId": "79eea4ec-f7d0-412a-9352-5f1e6fab6290",
+    "containerId": "",
+    "name": "login",
+    "url": "http://localhost:3001/login",
+    "method": "POST",
+    "sortNum": 30000,
+    "created": "2023-03-30T21:15:45.400Z",
+    "modified": "2023-03-31T18:50:27.201Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\": \"admin@admin.com\",\n  \"password\": \"secret_admin\"\n}",
+      "form": []
+    },
+    "tests": []
   }
 ]

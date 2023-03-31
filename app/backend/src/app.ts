@@ -15,6 +15,7 @@ class App {
     this.app.get('/', (req, res) => res.json({ ok: true }));
 
     this.app.use('/teams', routes.teamsRouter);
+    this.app.use('/login', routes.userRouter);
 
     this.app.use(APIerrors);
   }

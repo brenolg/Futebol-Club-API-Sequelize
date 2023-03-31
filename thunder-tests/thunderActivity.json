@@ -12,5 +12,19 @@
     "headers": [],
     "params": [],
     "tests": []
+  },
+  {
+    "_id": "585fd8ad-d757-4218-8cbb-36de027c422d",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3001/teams/1",
+    "url": "http://localhost:3001/teams/1",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-03-30T21:39:18.523Z",
+    "modified": "2023-03-30T21:39:18.523Z",
+    "headers": [],
+    "params": [],
+    "tests": []
   }
 ]
