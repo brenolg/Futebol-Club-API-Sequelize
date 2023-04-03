@@ -9,6 +9,6 @@ const errorMiddleware = (
 ) => {
   console.log('err', error);
   const { status, message } = error;
-  res.status(status || 500).json({ message });
+  return res.status(status || 500).json({ message });
 };
 export default errorMiddleware;

@@ -1,5 +1,7 @@
 import { Request, Response } from 'express';
 import UserService from '../services/user.service';
+import IRequest from '../interfaces/IRequest';
+import ApiError from '../shared/api.errors';
 
 export default class UserController {
   private service: UserService;
@@ -13,8 +15,14 @@ export default class UserController {
     res.status(200).json(token);
   }
 
-  async loginRole(req: Request, res: Response) : Promise<void> {
-    const userRole = await this.service.getRole(req.body);
-    res.status(200).json(userRole);
+  async loginRole(req: IRequest, res: Response) : Promise<Response> {
+    const email = req.body.user.data;
+    console.log(email);
+
+    if (email) {
+      const userRole = await this.service.getRole(email);
+      return res.status(200).json(userRole);
+    }
+    throw new ApiError(404, 'User not Found');
   }
 }

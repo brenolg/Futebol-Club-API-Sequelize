@@ -5,6 +5,7 @@ import Users from '../database/models/users';
 import ILogin from '../interfaces/Ilogin';
 import ApiError from '../shared/api.errors';
 import validations from './validations/validations';
+import IRequest from '../interfaces/IRequest';
 
 export default class UserService {
   private model: ModelStatic<Users> = Users ;
@@ -12,7 +13,7 @@ export default class UserService {
   async login(userData: ILogin) {
     const { email, password } = userData;
 
-    await validations.validateLogin(userData);
+    validations.validateLogin(userData);
 
     const user = await this.model.findOne({ where: { email } });
 
@@ -28,8 +29,7 @@ export default class UserService {
     return { token };
   }
 
-  async getRole(userData: ILogin) {
-    const { email } = userData;
+  async getRole(email: IRequest) {
     const user = await this.model.findOne({
       where: { email },
       attributes: ['role'] });

@@ -36,7 +36,7 @@
     "method": "POST",
     "sortNum": 30000,
     "created": "2023-03-30T21:15:45.400Z",
-    "modified": "2023-03-31T18:50:27.201Z",
+    "modified": "2023-04-03T18:43:35.263Z",
     "headers": [],
     "params": [],
     "body": {
@@ -50,7 +50,7 @@
     "_id": "a10a35e5-80ba-4de5-a033-4bf700f0de4d",
     "colId": "79eea4ec-f7d0-412a-9352-5f1e6fab6290",
     "containerId": "",
-    "name": "login Copy",
+    "name": "Old Token",
     "url": "http://localhost:3001/login/role",
     "method": "GET",
     "sortNum": 40000,
@@ -68,6 +68,25 @@
       "raw": "{\n  \"email\": \"admin@admin.com\",\n  \"password\": \"secret_admin\"\n}",
       "form": []
     },
+    "tests": []
+  },
+  {
+    "_id": "737d8b1b-da1f-48b9-9ba2-63887c939034",
+    "colId": "79eea4ec-f7d0-412a-9352-5f1e6fab6290",
+    "containerId": "",
+    "name": "Role",
+    "url": "http://localhost:3001/login/role",
+    "method": "GET",
+    "sortNum": 50000,
+    "created": "2023-04-03T18:19:10.383Z",
+    "modified": "2023-04-03T18:49:57.554Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiYWRtaW5AYWRtaW4uY29tIiwiaWF0IjoxNjgwNTQ3NDE1LCJleHAiOjE2ODA2MzM4MTV9.qcvGyt7TtXOAJGzN0nMB2BaH9lrM-VM5yT7_EtNcXU8"
+      }
+    ],
+    "params": [],
     "tests": []
   }
 ]
