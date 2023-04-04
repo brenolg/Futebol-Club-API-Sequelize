@@ -107,5 +107,30 @@
     ],
     "params": [],
     "tests": []
+  },
+  {
+    "_id": "ca1f3cb6-51f2-4bc4-836c-aa1ae5d8cbe8",
+    "colId": "79eea4ec-f7d0-412a-9352-5f1e6fab6290",
+    "containerId": "",
+    "name": "matches Copy",
+    "url": "http://localhost:3001/matches?inProgress=true",
+    "method": "GET",
+    "sortNum": 70000,
+    "created": "2023-04-04T21:08:03.643Z",
+    "modified": "2023-04-04T21:30:39.787Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiYWRtaW5AYWRtaW4uY29tIiwiaWF0IjoxNjgwNTQ3NDE1LCJleHAiOjE2ODA2MzM4MTV9.qcvGyt7TtXOAJGzN0nMB2BaH9lrM-VM5yT7_EtNcXU8"
+      }
+    ],
+    "params": [
+      {
+        "name": "inProgress",
+        "value": "true",
+        "isPath": false
+      }
+    ],
+    "tests": []
   }
 ]
