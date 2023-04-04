@@ -15,10 +15,11 @@ export default class MatchesService {
         as: 'homeTeam',
       }],
     });
+
     return allMatches;
   }
 
-  async getInProgressMatches(progress: string): Promise<Matches[]> {
+  async getInProgressMatches(progress : boolean): Promise<Matches[]> {
     const allMatches = await this.model.findAll({
       include: [{
         model: Teams,
@@ -30,5 +31,19 @@ export default class MatchesService {
       where: { inProgress: progress },
     });
     return allMatches;
+  }
+
+  async finishMatch(id: number) {
+    await this.model.update(
+      { inProgress: false },
+      { where: { id } },
+    );
+  }
+
+  async updateMatch(id: number, homeTeamGoals: number, awayTeamGoals: number) {
+    await this.model.update(
+      { homeTeamGoals, awayTeamGoals },
+      { where: { id } },
+    );
   }
 }
