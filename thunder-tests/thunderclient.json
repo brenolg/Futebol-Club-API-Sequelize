@@ -88,5 +88,24 @@
     ],
     "params": [],
     "tests": []
+  },
+  {
+    "_id": "3de6226a-3835-4fe8-9ec9-789ea2ba7030",
+    "colId": "79eea4ec-f7d0-412a-9352-5f1e6fab6290",
+    "containerId": "",
+    "name": "matches",
+    "url": "http://localhost:3001/matches",
+    "method": "GET",
+    "sortNum": 60000,
+    "created": "2023-04-04T18:35:31.666Z",
+    "modified": "2023-04-04T18:35:42.264Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiYWRtaW5AYWRtaW4uY29tIiwiaWF0IjoxNjgwNTQ3NDE1LCJleHAiOjE2ODA2MzM4MTV9.qcvGyt7TtXOAJGzN0nMB2BaH9lrM-VM5yT7_EtNcXU8"
+      }
+    ],
+    "params": [],
+    "tests": []
   }
 ]

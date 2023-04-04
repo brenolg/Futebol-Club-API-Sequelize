@@ -16,6 +16,7 @@ class App {
 
     this.app.use('/teams', routes.teamsRouter);
     this.app.use('/login', routes.userRouter);
+    this.app.use('/matches', routes.matchRouter);
 
     this.app.use(APIerrors);
   }
