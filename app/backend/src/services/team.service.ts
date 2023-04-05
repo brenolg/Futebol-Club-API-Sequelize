@@ -1,6 +1,7 @@
 import { ModelStatic } from 'sequelize';
 import ITeam from '../interfaces/Iteam';
 import Teams from '../database/models/teams';
+import ApiError from '../shared/api.errors';
 
 export default class TeamsService {
   private model: ModelStatic<Teams> = Teams;
@@ -12,6 +13,7 @@ export default class TeamsService {
 
   async getTeamById(id: number): Promise<ITeam | null> {
     const team = await this.model.findByPk(id) as ITeam | null;
+    if (!team) throw new ApiError(404, 'Team not found');
     return team;
   }
 }

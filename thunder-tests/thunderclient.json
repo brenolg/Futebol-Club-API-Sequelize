@@ -18,11 +18,11 @@
     "colId": "79eea4ec-f7d0-412a-9352-5f1e6fab6290",
     "containerId": "",
     "name": "http://localhost:3001/id",
-    "url": "http://localhost:3001/teams/1",
+    "url": "http://localhost:3001/teams/99",
     "method": "GET",
     "sortNum": 20000,
     "created": "2023-03-30T12:18:01.864Z",
-    "modified": "2023-03-30T12:18:16.078Z",
+    "modified": "2023-04-05T23:11:39.031Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -36,12 +36,12 @@
     "method": "POST",
     "sortNum": 30000,
     "created": "2023-03-30T21:15:45.400Z",
-    "modified": "2023-04-03T18:43:35.263Z",
+    "modified": "2023-04-05T21:06:17.704Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"email\": \"admin@admin.com\",\n  \"password\": \"secret_admin\"\n}",
+      "raw": "{\n  \"email\": \"\",\n  \"password\": \"secret_admin\"\n}",
       "form": []
     },
     "tests": []
@@ -185,7 +185,7 @@
     "method": "POST",
     "sortNum": 100000,
     "created": "2023-04-05T16:28:49.995Z",
-    "modified": "2023-04-05T16:59:24.657Z",
+    "modified": "2023-04-05T19:51:20.415Z",
     "headers": [
       {
         "name": "Authorization",
@@ -195,7 +195,7 @@
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"homeTeamId\": 8, \n  \"awayTeamId\": 8,\n  \"homeTeamGoals\": 2,\n  \"awayTeamGoals\": 2\n}",
+      "raw": "{\n  \"homeTeamId\": 8, \n  \"awayTeamId\": 7,\n  \"homeTeamGoals\": 2,\n  \"awayTeamGoals\": 2\n}",
       "form": []
     },
     "tests": []

@@ -7,7 +7,7 @@ const errorMiddleware = (
   res: Response,
   _next: NextFunction,
 ) => {
-  console.log('err', error);
+  console.log('ERROR', error);
   const { status, message } = error;
   return res.status(status || 500).json({ message });
 };
