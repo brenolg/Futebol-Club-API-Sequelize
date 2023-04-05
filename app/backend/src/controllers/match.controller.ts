@@ -11,12 +11,12 @@ export default class MatchesController {
   async getAllMatches(req: Request, res: Response) {
     const { inProgress } = req.query;
 
-    if (inProgress === 'true') {
-      const inProgressMatches = await this.service.getInProgressMatches(true);
-      return res.status(200).json(inProgressMatches);
-    }
+    let progress = true;
     if (inProgress === 'false') {
-      const inProgressMatches = await this.service.getInProgressMatches(false);
+      progress = false;
+    }
+    if (inProgress) {
+      const inProgressMatches = await this.service.getInProgressMatches(progress);
       return res.status(200).json(inProgressMatches);
     }
 
@@ -37,5 +37,12 @@ export default class MatchesController {
 
     await this.service.updateMatch(Number(id), homeTeamGoals, awayTeamGoals);
     res.status(200).json({ message: 'Updated' });
+  }
+
+  async createInProgressMatch(req: Request, res: Response) : Promise<void> {
+    const matchData = req.body;
+
+    const newMatch = await this.service.createInProgressMatch(matchData);
+    res.status(201).json(newMatch);
   }
 }

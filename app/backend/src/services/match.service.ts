@@ -1,6 +1,7 @@
 import { ModelStatic } from 'sequelize';
 import Matches from '../database/models/matches';
 import Teams from '../database/models/teams';
+import IMatch from '../interfaces/IMatch';
 
 export default class MatchesService {
   private model: ModelStatic<Matches> = Matches;
@@ -45,5 +46,13 @@ export default class MatchesService {
       { homeTeamGoals, awayTeamGoals },
       { where: { id } },
     );
+  }
+
+  async createInProgressMatch(matchData: IMatch) {
+    const newMatch = await this.model.create(
+      { ...matchData, inProgress: true },
+    );
+
+    return newMatch;
   }
 }

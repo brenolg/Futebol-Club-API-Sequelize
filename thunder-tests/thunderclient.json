@@ -175,5 +175,29 @@
       "form": []
     },
     "tests": []
+  },
+  {
+    "_id": "b4eaa18d-db16-4f78-9007-727663f28df5",
+    "colId": "79eea4ec-f7d0-412a-9352-5f1e6fab6290",
+    "containerId": "",
+    "name": "matches Copy Copy Copy Copy",
+    "url": "http://localhost:3001/matches",
+    "method": "POST",
+    "sortNum": 100000,
+    "created": "2023-04-05T16:28:49.995Z",
+    "modified": "2023-04-05T16:30:41.573Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiYWRtaW5AYWRtaW4uY29tIiwiaWF0IjoxNjgwNjQ1MTIxLCJleHAiOjE2ODA3MzE1MjF9.XxPB6v5xhL9oFYTIl1-8vB9sWAm7EN4plbOSBGVWehk"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"homeTeamId\": 16, \n  \"awayTeamId\": 8,\n  \"homeTeamGoals\": 2,\n  \"awayTeamGoals\": 2\n}",
+      "form": []
+    },
+    "tests": []
   }
 ]

@@ -22,4 +22,11 @@ matchRouter.patch(
     matchController.updateMatch(req, res),
 );
 
+matchRouter.post(
+  '/',
+  userMiddlewares.validateToken,
+  (req: Request, res: Response) =>
+    matchController.createInProgressMatch(req, res),
+);
+
 export default matchRouter;
