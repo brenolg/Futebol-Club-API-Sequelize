@@ -185,7 +185,7 @@
     "method": "POST",
     "sortNum": 100000,
     "created": "2023-04-05T16:28:49.995Z",
-    "modified": "2023-04-05T16:30:41.573Z",
+    "modified": "2023-04-05T16:59:24.657Z",
     "headers": [
       {
         "name": "Authorization",
@@ -195,7 +195,7 @@
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"homeTeamId\": 16, \n  \"awayTeamId\": 8,\n  \"homeTeamGoals\": 2,\n  \"awayTeamGoals\": 2\n}",
+      "raw": "{\n  \"homeTeamId\": 8, \n  \"awayTeamId\": 8,\n  \"homeTeamGoals\": 2,\n  \"awayTeamGoals\": 2\n}",
       "form": []
     },
     "tests": []

@@ -2,6 +2,7 @@ import { ModelStatic } from 'sequelize';
 import Matches from '../database/models/matches';
 import Teams from '../database/models/teams';
 import IMatch from '../interfaces/IMatch';
+import ApiError from '../shared/api.errors';
 
 export default class MatchesService {
   private model: ModelStatic<Matches> = Matches;
@@ -49,6 +50,10 @@ export default class MatchesService {
   }
 
   async createInProgressMatch(matchData: IMatch) {
+    const hasHomeId = await Teams.findByPk(matchData.homeTeamId);
+    const hasAwayId = await Teams.findByPk(matchData.awayTeamId);
+
+    if (!hasAwayId || !hasHomeId) throw new ApiError(404, 'There is no team with such id!');
     const newMatch = await this.model.create(
       { ...matchData, inProgress: true },
     );

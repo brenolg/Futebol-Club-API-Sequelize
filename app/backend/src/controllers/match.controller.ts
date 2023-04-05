@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import MatchesService from '../services/match.service';
+import ApiError from '../shared/api.errors';
 
 export default class MatchesController {
   private service: MatchesService;
@@ -41,6 +42,10 @@ export default class MatchesController {
 
   async createInProgressMatch(req: Request, res: Response) : Promise<void> {
     const matchData = req.body;
+
+    if (matchData.awayTeamId === matchData.homeTeamId) {
+      throw new ApiError(422, 'It is not possible to create a match with two equal teams');
+    }
 
     const newMatch = await this.service.createInProgressMatch(matchData);
     res.status(201).json(newMatch);
