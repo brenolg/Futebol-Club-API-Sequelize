@@ -17,7 +17,6 @@ export default class UserController {
 
   async loginRole(req: IRequest, res: Response) : Promise<Response> {
     const email = req.body.user.data;
-    console.log(email);
 
     if (email) {
       const userRole = await this.service.getRole(email);

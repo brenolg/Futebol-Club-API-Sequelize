@@ -151,5 +151,29 @@
     ],
     "params": [],
     "tests": []
+  },
+  {
+    "_id": "a55a18c5-1024-4e87-a2d2-7efbecaa9f7a",
+    "colId": "79eea4ec-f7d0-412a-9352-5f1e6fab6290",
+    "containerId": "",
+    "name": "matches Copy Copy Copy",
+    "url": "http://localhost:3001/matches/1",
+    "method": "PATCH",
+    "sortNum": 90000,
+    "created": "2023-04-05T13:38:18.064Z",
+    "modified": "2023-04-05T13:38:44.515Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiYWRtaW5AYWRtaW4uY29tIiwiaWF0IjoxNjgwNjQ1MTIxLCJleHAiOjE2ODA3MzE1MjF9.XxPB6v5xhL9oFYTIl1-8vB9sWAm7EN4plbOSBGVWehk"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"homeTeamGoals\": 3,\n  \"awayTeamGoals\": 1\n}",
+      "form": []
+    },
+    "tests": []
   }
 ]
