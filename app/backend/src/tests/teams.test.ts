@@ -5,29 +5,33 @@ import chaiHttp = require('chai-http') ;
 import { app } from '../app';
 import Teams from '../database/models/teams';
 import teams from './mocks/teams';
-const {expect} = chai
 
 chai.use(chaiHttp);
+const {expect} = chai
 
-describe('Testes Teams', () => {
+describe('Testando a rota /teams', () => {
+
+  afterEach(sinon.restore);
 
   describe('GET /teams', () => {
-    it('deve retornar um status 200', async () => {
-      sinon.stub(Teams, 'findAll').resolves(teams);
-      const httpResponse = await chai
-        .request(app)
-        .get('/teams/1');
+    describe('Quando a requisição é feita com sucesso', () => {
 
-        expect(httpResponse.status).to.be.equal(200);
-        expect(httpResponse.body).to.be.deep.equal(teams);
+      it('deve retornar um status 200', async () => {
+        sinon.stub(Teams, 'findAll').resolves(teams);
+        const httpResponse = await chai
+          .request(app)
+          .get('/teams/1');
+  
+          expect(httpResponse.status).to.be.equal(200);
+          expect(httpResponse.body).to.be.deep.equal(teams);
+    })
+
     })
   })
 
   describe('GET /teams/:id', () => {
 
-    describe('caso o id informado não for encontrado', () => {
-
-      afterEach(sinon.restore);
+    describe('Caso o id informado não for encontrado', () => {
 
       it('deve retornar um status 404', async () => {
         sinon.stub(Teams, 'findByPk').resolves(null);
@@ -40,10 +44,11 @@ describe('Testes Teams', () => {
       });
     });
   
-    describe('quando a requisição é feita com sucesso', () => {
+    describe('Quando a requisição é feita com sucesso', () => {
 
       it('deve retornar um status 200', async () => {
         sinon.stub(Teams, 'findByPk').resolves(teams[0]);
+
         const httpResponse = await chai
           .request(app)
           .get('/teams/1');

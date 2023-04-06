@@ -1,5 +1,5 @@
 import { ModelStatic } from 'sequelize';
-import bcrypt =require('bcryptjs');
+import bcrypt = require('bcryptjs');
 import { createToken } from '../auth/authFuncs';
 import Users from '../database/models/users';
 import ILogin from '../interfaces/Ilogin';
