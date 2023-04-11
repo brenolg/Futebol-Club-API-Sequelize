@@ -1,11 +1,11 @@
-const homeQuery = `
+const awayQuery = `
 SELECT teams.team_name AS name,
 
 COUNT(matches.id) AS totalGames,
 
 SUM(
   CASE
-  WHEN matches.home_team_goals > matches.away_team_goals THEN 3
+  WHEN matches.home_team_goals < matches.away_team_goals THEN 3
   WHEN matches.home_team_goals = matches.away_team_goals THEN 1
   ELSE 0
   END
@@ -13,7 +13,7 @@ SUM(
 
 SUM(
   CASE
-  WHEN matches.home_team_goals > matches.away_team_goals THEN 1
+  WHEN matches.home_team_goals < matches.away_team_goals THEN 1
   ELSE 0
   END
 ) AS totalVictories,
@@ -27,20 +27,20 @@ SUM(
 
 SUM(
   CASE
-  WHEN matches.home_team_goals < matches.away_team_goals THEN 1
+  WHEN matches.home_team_goals > matches.away_team_goals THEN 1
   ELSE 0
   END
 ) AS totalLosses,
 
-SUM(matches.home_team_goals) AS goalsFavor,
+SUM(matches.away_team_goals) AS goalsFavor,
 
-SUM(matches.away_team_goals) AS goalsOwn,
+SUM(matches.home_team_goals) AS goalsOwn,
 
-SUM(matches.home_team_goals - matches.away_team_goals) AS goalsBalance,
+SUM(matches.away_team_goals - matches.home_team_goals) AS goalsBalance,
 
 FORMAT((SUM(
   CASE
-  WHEN matches.home_team_goals > matches.away_team_goals THEN 3
+  WHEN matches.home_team_goals < matches.away_team_goals THEN 3
   WHEN matches.home_team_goals = matches.away_team_goals THEN 1
   ELSE 0
   END
@@ -48,7 +48,7 @@ FORMAT((SUM(
 
 FROM TRYBE_FUTEBOL_CLUBE.teams AS teams
 INNER JOIN TRYBE_FUTEBOL_CLUBE.matches AS matches
-ON teams.id = matches.home_team_id
+ON teams.id = matches.away_team_id
 WHERE matches.in_progress = false
 GROUP BY teams.id
 
@@ -59,4 +59,4 @@ goalsBalance DESC,
 goalsFavor DESC;
 `;
 
-export default homeQuery;
+export default awayQuery;
