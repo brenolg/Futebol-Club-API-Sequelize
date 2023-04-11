@@ -205,11 +205,11 @@
     "colId": "79eea4ec-f7d0-412a-9352-5f1e6fab6290",
     "containerId": "",
     "name": "matches Copy Copy Copy Copy Copy",
-    "url": "http://localhost:3001/leaderboard/home",
+    "url": "http://localhost:3001/leaderboard/away",
     "method": "GET",
     "sortNum": 110000,
     "created": "2023-04-10T19:15:13.973Z",
-    "modified": "2023-04-11T14:51:34.075Z",
+    "modified": "2023-04-11T21:17:12.728Z",
     "headers": [
       {
         "name": "Authorization",
