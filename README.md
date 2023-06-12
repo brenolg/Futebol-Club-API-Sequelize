@@ -34,10 +34,6 @@ No geral, o projeto busca simular um cenário real, onde é necessário integrar
     - Chai
     - Sinon
 
-### Banco de dados  
-
-
-
 ## Banco de Dados
 <details close>
     <summary><strong> Diagrama e Tabelas</strong></summary>
