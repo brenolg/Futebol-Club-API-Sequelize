@@ -8,10 +8,6 @@ Como responsável pelo desenvolvimento do back-end dockerizado, você utilizou o
 
 No geral, o projeto busca simular um cenário real, onde é necessário integrar o front-end e o back-end, utilizando um banco de dados relacional e seguindo as regras de negócio estabelecidas. O resultado final será uma API funcional que fornecerá os dados necessários para o front-end exibir as informações de forma adequada aos usuários.
 
-## Demo  
-
-##########IIMGGGG giff
-
 ## Funcionalidades
 
 - Dockerização dos apps, network, volume e compose;
@@ -39,11 +35,28 @@ No geral, o projeto busca simular um cenário real, onde é necessário integrar
     - Sinon
 
 ### Banco de dados  
+
+
+
+## Banco de Dados
+<details close>
+    <summary><strong> Diagrama e Tabelas</strong></summary>
+
   - MySQL 
+  1. #### **Diagrama ER**
+<img src="./database.png"/>         
+
+  2. #### **Seeders**  
+  O banco de dados contém:
+  - tabela `users` com usuários válidos com hash das senhas e alguns inválidos, estes útimos utilizados para os testes avaliativos.
+  - tabela `teams` com a lista de todos os times que estão participando do campeonato.
+  - tabela `matches` com algumas partidadas finalizadas e outras em andamento.
+ </details>
 
 ## Documentação da API
 
-### **Visão geral**
+<details close>
+      <summary><strong> Visão geral</summary>
 
 | Endpoint     | Método HTTP | Descrição               | 
 | :----------- | :---------- | :---------------------- |
@@ -62,6 +75,9 @@ No geral, o projeto busca simular um cenário real, onde é necessário integrar
 | [`/leaderboard/away`](#endpoint-leaderboardaway)  | GET          | Retorna a classificação dos times visitantes.
 
 :closed_lock_with_key: : Necessário que o `token` gerado no login seja enviado no headers como _"Authorization"_.
+ </details>
+  
+
 
 ### **Corpo das requisições e respostas**  
 > *Clique nas setas para ver mais*  
@@ -435,18 +451,8 @@ No geral, o projeto busca simular um cenário real, onde é necessário integrar
     ]
     ```
 </details>  
+</details>
 
-
-
-## Banco de Dados
-  1. #### **Diagrama ER**
-IIIMGGGGG #############################################
-
-  2. #### **Seeders**  
-  O banco de dados contém:
-  - tabela `users` com usuários válidos com hash das senhas e alguns inválidos, estes útimos utilizados para os testes avaliativos.
-  - tabela `teams` com a lista de todos os times que estão participando do campeonato.
-  - tabela `matches` com algumas partidadas finalizadas e outras em andamento.
 
 ## Instalando localmente
 
