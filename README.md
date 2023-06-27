@@ -455,7 +455,7 @@ No geral, o projeto busca simular um cenário real, onde é necessário integrar
 Caso deseje contribuir ou simplesmente rodar o projeto na sua máquina, siga as orientações: 
 
 . Clone o repositório   
-  `git clone git@github.com:brenolg/Futebol-Club-API.git`
+  `git clone git@github.com:brenolg/Futebol-Club-API-Sequelize.git`
 
 . Instale as dependências no diretório raiz  
   `npm install`
